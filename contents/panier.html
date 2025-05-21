@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Votre panier</title>
+  <link rel="stylesheet" href="../css/projet.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="../index.html">Accueil</a>
+      <a href="panier.html">Panier</a>
+      <a href="connexion.html">Compte</a>
+      <a href="listeproduits.html">Nos produits</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Votre panier</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Produit</th>
+          <th>Quantité</th>
+          <th>Prix unitaire</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="panier-items"></tbody>
+    </table>
+
+    <p>Total à payer : <strong id="total">0 DA</strong></p>
+
+    <div style="text-align:center; margin-top: 20px;">
+      <button onclick="viderPanier()">Vider le panier</button>
+      <button onclick="confirmerCommande()">Confirmer la commande</button>
+    </div>
+  </main>
+
+  <script src="../js/javascript.js"></script>
+</body>
+</html>

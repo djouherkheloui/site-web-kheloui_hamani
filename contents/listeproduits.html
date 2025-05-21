@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html lang="fr">
+    <link rel="stylesheet" href="../css/projet.css">
+<body>   
+   <header>
+     
+         <nav>
+            <a href="../index.html">acceuil</a>
+            <a href="panier.html">panier</a>
+            <a href="connexion.html">compte</a>
+            <a href="listeproduits.html">nos parfums</a>
+          </nav>
+ 
+      </header> 
+    <h1>nos produits:</h1>
+    <div class="produit">
+        <a href="libre.html"><img src="../image/LIBRE-EDP-LANCOME.png"width="200px"height="auto"></a>
+        <h3>libre yves saint laurent</h3>
+       <p><strong align="center">prix:21 900 DA</strong></p> 
+       <button>ajouter au panier</button>
+    </div>
+    <div class="produit">
+        <a href="dolce.html"><img src="../image/DG-TO-INTENSE.png"width="200px"height="auto"></a>
+        <h3>dolce gabanna the one</h3>
+        <p><strong align="center">prix:19 000 DA</strong></p>
+        <button>ajouter au panier</button>
+    </div>
+    <div class="produit">
+        <a href="narcisoforher.html"><img src="../image/NARCISO-FOR-HER-EDP-9.jpg"width="200px"height="auto"></a>
+        <h3>narcisco for her</h3>
+        <p>prix:21 800 DA</p>
+        <button >ajouter au panier</button>
+    </div>
+    <div class="produit">
+        <a href="montblanc.html"><img src= "../image/montblanc-mens-explorer.webp"width="200px"height="auto"></a>
+        <h3>explorer platinum</h3>
+        <p>prix:18 200 DA</p>
+        <button >ajouter au panier</button>
+    </div>
+    <footer>
+        <h3>contactez nous</h3>
+        <li>
+          <u>0567890</u>
+        </li>
+        <li>
+          <u>instagram: senteur dz</u>
+        </li>
+        <li>
+          <u>facebook:senteur dz</u>
+        </li>
+        </footer>
+        <script src="../js/javascript.js"></script>
+    <script>
+        const boutons = document.querySelectorAll(".produit button");
+        boutons.forEach(bouton => {
+            bouton.addEventListener("click",() =>{
+                const nom =
+                bouton.parentElement.querySelector("h3").textContent;
+                const prixTexte =
+                bouton.parentElement.querySelector("p").textContent;
+                const prix = parseInt(prixTexte.replace(/\D/g,""));
+              
+                ajouterAuPanier(nom,prix);
+            });
+        });
+    </script>
+</body>
+</html>
